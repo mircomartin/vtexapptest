@@ -1,0 +1,35 @@
+{
+  "vendor": "cocobeyond",
+  "name": "test-app",
+  "version": "1.0.0",
+  "title": "Test app",
+  "description": "Sellers app component",
+  "defaultLocale": "en-US",
+  "builders": {
+    "messages": "1.x",
+    "store": "0.x",
+    "react": "3.x"
+  },
+  "dependencies": {
+    "vtex.styleguide": "9.x",
+    "vtex.css-handles": "0.x",
+    "vtex.search-graphql": "0.x",
+    "vtex.store-graphql": "2.x"
+  },
+  "policies": [
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.myvtex.com",
+        "path": "/api/dataentities/*"
+      }
+    },
+    {
+      "name": "POWER_USER_DS"
+    },
+    {
+      "name": "vbase-read-write"
+    }
+  ],
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

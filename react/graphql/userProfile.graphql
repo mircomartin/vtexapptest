@@ -1,0 +1,7 @@
+query {
+  profile @context(provider: "vtex.store-graphql") {
+    firstName
+    lastName
+    email
+  }
+}
